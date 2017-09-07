@@ -40,11 +40,11 @@ Examples can be found in `_Scripts/Examples/NewFieldsExample.cs`.
 
 3. By default, everything under `Unity` namespace will be included. If some custom namespaces are needed, they can be defined in the `Custom Namespaces` list.
 
-    Enable `Empty Namespace` will allow the database to include any type in global scope of Unity3D.
+    Enable `Empty Namespace` will allow the database to include any type in the global scope of Unity3D.
 
     ![](Screenshots/extendedevent-3.png)
 
-    Available namespaces are list here.
+    Available namespaces are listed here.
 
     ![](Screenshots/extendedevent-4.png)
 
