@@ -41,7 +41,7 @@ namespace ExtendedLibrary.Editor
             GUILayout.Space(10f);
             this.scrollPosition = GUILayout.BeginScrollView(this.scrollPosition);
 
-            if (GUILayout.Button("Locate Or Create Asset"))
+            if (GUILayout.Button("Locate Or Create Database"))
             {
                 TypeDataDictionary.LocateOrCreateAsset();
             }

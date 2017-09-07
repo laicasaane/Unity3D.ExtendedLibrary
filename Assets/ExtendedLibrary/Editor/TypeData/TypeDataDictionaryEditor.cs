@@ -11,8 +11,8 @@ namespace ExtendedLibrary
         private const string DEFAULT_NAMESPACE_LABEL = "Default Namespace";
         private const string CUSTOM_NAMESPACES_LABEL = "Custom Namespaces";
         private const string UPDATE_BUTTON_LABEL = "Update";
-        private const string CLEAR_BUTTON_LABEL = "Clear Saved Data";
-        private const string SHOW_DATA_PANEL_LABEL = "Show Types List";
+        private const string CLEAR_BUTTON_LABEL = "Clear Database";
+        private const string SHOW_DATA_PANEL_LABEL = "Show Saved Type List";
 
         private static GUIContent EmptyNamespaceLabel = new GUIContent("Empty Namespace", "Include types that have no namespace");
 

@@ -16,7 +16,7 @@ namespace ExtendedLibrary
 
         public static readonly string AssetPath = string.Format("{0}/{1}/{2}/TypeDataDictionary.asset", ROOT_FOLDER, SECONDARY_FOLDER, LIBRARY_FOLDER);
 
-        [MenuItem("Assets/Create/TypeData Dictionary", priority = 1)]
+        [MenuItem("Assets/Create/Types Database", priority = 1)]
         public static void LocateOrCreateAsset()
         {
             var asset = AssetDatabase.LoadAssetAtPath<TypeDataDictionary>(AssetPath);
