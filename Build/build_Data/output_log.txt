@@ -1,0 +1,46 @@
+Initialize engine version: 5.6.3p1 (9c92e827232b)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 950M (ID=0x139a)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   22.21.13.8541
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.236 seconds
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Develop\Projects\ExtendedLibrary\Build\build_Data\Managed\System.dll (this message is harmless)
+OnLevelWasLoaded was found on Reporter
+This message has been deprecated and will be removed in a later version of Unity.
+Add a delegate to SceneManager.sceneLoaded instead to get notifications after scene loading has completed
+ 
+(Filename:  Line: 376)
+
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 22.468273 ms
+DoSomething
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DoSomething (3)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+DoSomething (5, ABC)
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 30f0 -> priority: 1 
+  Thread -> id: 1aec -> priority: 1 
