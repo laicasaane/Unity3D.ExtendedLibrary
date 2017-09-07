@@ -688,6 +688,7 @@ public class Reporter : MonoBehaviour
         }
     }
 
+#pragma warning disable CS0649
     Rect countRect;
     Rect timeRect;
     Rect timeLabelRect;
@@ -699,9 +700,10 @@ public class Reporter : MonoBehaviour
     Rect fpsLabelRect;
     GUIContent tempContent = new GUIContent();
 
-
     Vector2 infoScrollPosition;
     Vector2 oldInfoDrag;
+#pragma warning restore  CS0649
+
     void DrawInfo()
     {
 
