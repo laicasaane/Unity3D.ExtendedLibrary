@@ -3,7 +3,7 @@
 - Custom property drawers for: `byte`, `sbyte`, `short`, `ushort`, `uint`, `long`, `ulong`, `char`, `Matrix4x4`, `Quaternion`, `Vector4`.
 - `ExtendedLibrary.ExtendedEvent` (based on the foundation of [Thundernerd/Unity3D-ExtendedEvent](https://github.com/Thundernerd/Unity3D-ExtendedEvent)).
 
-    **Support:** primitive data types (`int`, `float`, `enum`, etc.), some Unity3D structs (`Vector2`, `Vector3`, etc.), simple `Serializable` types, and `Array` or `List` of primitive or Unity3D types.
+    **Support:** primitive data types (`int`, `float`, `enum`, etc.), some Unity3D types (`Vector2`, `Vector3`, `UnityEngine.Object`, `AnimationCurve`, etc.), simple `Serializable` types, and `Array` or `List` of primitive or Unity3D types.
 
     **Read** `ExtendedLibrary/Events/ExtendedEvent.Value.cs` for better understanding of the supported types.
 
