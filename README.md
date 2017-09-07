@@ -11,7 +11,7 @@ Support: primitive data types (`int`, `float`, `enum`, etc.), some Unity3D struc
 
 ## Limitations
 ### ExtendedEvent
-- Since `ExtendedEvent` uses Reflection in runtime, it's not guaranteed to run on AOT platforms (IL2CPP, iOS, MacOS, etc.).
+- Since `ExtendedEvent` uses Reflection in runtime, it's not guaranteed to run on AOT platforms (IL2CPP, iOS, etc.).
 - Parameter editor cannot correctly show:
     - `Array` or `List` of types that have a custom drawer (`Vector4`, `Quaternion`, `Matrix4x4`, etc.).
     - Custom drawers inside a `Serializable` type. For example, a `Matrix4x4` member of `ClassA`.
