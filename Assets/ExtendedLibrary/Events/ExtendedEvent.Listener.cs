@@ -42,12 +42,12 @@ namespace ExtendedLibrary.Events
             [SerializeField]
             private LevelFilter levelFilter;
 
+#pragma warning restore CS0414
+#endif // UNITY_EDITOR
+
             [HideInInspector]
             [SerializeField]
             private string selectedLabel;
-
-#pragma warning restore CS0414
-#endif // UNITY_EDITOR
 
             [HideInInspector]
             [SerializeField]
@@ -78,12 +78,14 @@ namespace ExtendedLibrary.Events
 
                 try
                 {
+#if UNITY_EDITOR
                     if (this.valueArray == null)
                     {
                         this.valueArray = this.values == null ? new Value[0] : this.values.ToArray();
                     }
 
                     this.memberInfo.Initialize(this.target, this.valueArray);
+#endif // UNITY_EDITOR
 
                     return this.memberInfo.Invoke();
                 }
@@ -91,6 +93,27 @@ namespace ExtendedLibrary.Events
                 {
                     Debug.LogError(string.Format("{0}: {1}\n{2}\n{3}", this.targetName, this.selectedLabel, e.Message, e.StackTrace));
                     return null;
+                }
+            }
+
+            internal void Initialize()
+            {
+                if (this.index < 0)
+                    return;
+
+                try
+                {
+                    if (this.valueArray == null)
+                    {
+                        this.valueArray = this.values == null ? new Value[0] : this.values.ToArray();
+                    }
+
+                    this.memberInfo.Initialize(this.target, this.valueArray);
+                }
+                catch (Exception e)
+                {
+                    Debug.LogError(string.Format("{0}: {1}\n{2}\n{3}", this.targetName, this.selectedLabel, e.Message, e.StackTrace));
+                    return;
                 }
             }
         }

@@ -7,7 +7,7 @@ using UnityEngine.Events;
 namespace ExtendedLibrary.Events
 {
     [Serializable]
-    public partial class ExtendedEvent
+    public partial class ExtendedEvent : ISerializationCallbackReceiver
     {
         [HideInInspector]
         [SerializeField]
@@ -269,6 +269,21 @@ namespace ExtendedLibrary.Events
 
             if (index >= 0)
                 this.callbacks.RemoveAt(index);
+        }
+
+        public void OnBeforeSerialize()
+        {
+        }
+
+        public void OnAfterDeserialize()
+        {
+#if !UNITY_EDITOR
+            for (var i = 0; i < this.listeners.Count; ++i)
+            {
+                if (this.listeners[i] != null)
+                    this.listeners[i].Initialize();
+            }
+#endif // !UNITY_EDITOR
         }
     }
 }
