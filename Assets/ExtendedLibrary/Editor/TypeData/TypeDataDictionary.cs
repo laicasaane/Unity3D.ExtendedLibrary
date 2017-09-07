@@ -74,6 +74,37 @@ namespace ExtendedLibrary
         [SerializeField]
         private List<TypeData> values;
 
+        public bool IncludeEmptyNamespaceTypes
+        {
+            get { return this.includeEmptyNamespaceTypes; }
+        }
+
+        public List<string> CustomNamespaces
+        {
+            get { return this.customNamespaces; }
+        }
+
+        public void SetIncludeEmptyNamespaceTypes(bool value)
+        {
+            if (!IsValidSelection())
+                return;
+
+            this.includeEmptyNamespaceTypes = value;
+
+            ApplyChanges();
+        }
+
+        public void SetCustomNamespaces(List<string> namespaces)
+        {
+            if (!IsValidSelection())
+                return;
+
+            this.customNamespaces.Clear();
+            this.customNamespaces.AddRange(namespaces);
+
+            ApplyChanges();
+        }
+
         public string[][] GetSavedTypes()
         {
             var savedTypes = new string[this.types.Count][];
@@ -93,9 +124,7 @@ namespace ExtendedLibrary
 
             INTERNAL_ClearData();
 
-            AssetDatabase.Refresh();
-            EditorUtility.SetDirty(Selection.activeObject);
-            AssetDatabase.SaveAssets();
+            ApplyChanges();
         }
 
         public void UpdateData()
@@ -105,9 +134,7 @@ namespace ExtendedLibrary
 
             INTERNAL_UpdateData();
 
-            AssetDatabase.Refresh();
-            EditorUtility.SetDirty(Selection.activeObject);
-            AssetDatabase.SaveAssets();
+            ApplyChanges();
         }
 
         public TypeData GetValue(Type type, BindingFlags flags)
@@ -118,6 +145,13 @@ namespace ExtendedLibrary
                 return this.values[key];
 
             return null;
+        }
+
+        private void ApplyChanges()
+        {
+            AssetDatabase.Refresh();
+            EditorUtility.SetDirty(Selection.activeObject);
+            AssetDatabase.SaveAssets();
         }
 
         private bool IsValidSelection()
