@@ -34,7 +34,7 @@ Examples can be found in `_Scripts/Examples/NewFieldsExample.cs`.
 
     ![](Screenshots/extendedevent-1.png)
 
-2. Create new database or locate the existing one for updating.
+2. Create new database or locate the existing one for updating. The database path should always be `Assets/Editor/ExtendedLibrary/TypeDataDictionary.asset`.
 
     ![](Screenshots/extendedevent-2.png)
 
