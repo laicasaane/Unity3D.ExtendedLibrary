@@ -1,11 +1,23 @@
 # Unity3D.ExtendedLibrary
 ## What are included
-- `ExtendedLibrary.ExtendedEvent` (based on the foundation of [Thundernerd/Unity3D-ExtendedEvent](https://github.com/Thundernerd/Unity3D-ExtendedEvent))
-- Property drawers for: `byte`, `sbyte`, `short`, `ushort`, `uint`, `long`, `ulong`, `char`, `Matrix4x4`, `Quaternion`, `Vector4`.
+- Custom property drawers for: `byte`, `sbyte`, `short`, `ushort`, `uint`, `long`, `ulong`, `char`, `Matrix4x4`, `Quaternion`, `Vector4`.
+- `ExtendedLibrary.ExtendedEvent` (based on the foundation of [Thundernerd/Unity3D-ExtendedEvent](https://github.com/Thundernerd/Unity3D-ExtendedEvent)).
+<br>
+Support: primitive data types (`int`, `float`, `enum`, etc.), some Unity3D structs (`Vector2`, `Vector3`, etc.), `Array` or `List` of those primitive or Unity3D types, and simple `Serializable` types.
 
 ## Dependencies
 - [Reorderable List Editor Field for Unity](https://bitbucket.org/rotorz/reorderable-list-editor-field-for-unity)
 - [jacobdufault/fullserializer](https://github.com/jacobdufault/fullserializer) (Can be replaced by another JSON Serializer. In that case, `ExtendedLibrary/Extensions/JsonConverter.cs` should be modified).
+
+## Limitations
+### ExtendedEvent
+- Since `ExtendedEvent` uses Reflection in runtime, it's not guaranteed to run on AOT platforms (IL2CPP, iOS, MacOS, etc.).
+- Parameter editor cannot correctly show:
+    - `Array` or `List` of types that have a custom drawer (`Vector4`, `Quaternion`, `Matrix4x4`, etc.).
+    - Custom drawers inside a `Serializable` type. For example, a `Matrix4x4` member of `ClassA`.
+
+    **Note:** Primitive types (`byte`, `short`, `uint`, etc.) are unaffected. Since they have only 01 simple input field.
+
 
 ## How to use
 ### Property drawers
