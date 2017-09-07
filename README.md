@@ -15,8 +15,8 @@ Support: primitive data types (`int`, `float`, `enum`, etc.), some Unity3D struc
 - Parameter editor cannot correctly show:
     - `Array` or `List` of types that have a custom drawer (`Vector4`, `Quaternion`, `Matrix4x4`, etc.).
     - Custom drawers inside a `Serializable` type. For example, a `Matrix4x4` member of `ClassA`.
-    <br>
-    ![](Screenshots/incorrect-parameter-editor.png)
+
+        ![](Screenshots/incorrect-parameter-editor.png)
 
     **Note:** Primitive types (`byte`, `short`, `uint`, etc.) are unaffected since they have only 01 simple input field.
 
@@ -29,17 +29,17 @@ Examples can be found in `_Scripts/Examples/NewFieldsExample.cs`.
 
 ### ExtendedEvent
 1. Prebuild a reflection database for types. It contains the definition of every methods, properties and fields of each type. This prebuilt database will speed up the `ExtendedEvent` drawer in later use.
-<br>
-![](Screenshots/extendedevent-1.png)
+
+    ![](Screenshots/extendedevent-1.png)
 
 2. Create new database or locate the existing one for updating.
-<br>
-![](Screenshots/extendedevent-2.png)
+
+    ![](Screenshots/extendedevent-2.png)
 
 3. Update the `TypeDataDictionary`. By default, everything under `Unity` namespace will be included. If some custom namespaces are needed, they can be defined in the `Custom Namespaces` list.
-<br>
-![](Screenshots/extendedevent-3.png)
+
+    ![](Screenshots/extendedevent-3.png)
 
 4. Examples can be found in `_Scripts/Examples/ExtendedEventExample.cs`
-<br>
-![](Screenshots/extendedevent-4.png)
+
+    ![](Screenshots/extendedevent-4.png)
