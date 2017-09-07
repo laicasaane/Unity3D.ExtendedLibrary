@@ -38,10 +38,16 @@ Examples can be found in `_Scripts/Examples/NewFieldsExample.cs`.
 
     ![](Screenshots/extendedevent-2.png)
 
-3. Update the `TypeDataDictionary`. By default, everything under `Unity` namespace will be included. If some custom namespaces are needed, they can be defined in the `Custom Namespaces` list.
+3. By default, everything under `Unity` namespace will be included. If some custom namespaces are needed, they can be defined in the `Custom Namespaces` list.
+
+    Enable `Empty Namespace` will allow the database to include any type in global scope of Unity3D.
 
     ![](Screenshots/extendedevent-3.png)
 
-4. Examples can be found in `_Scripts/Examples/ExtendedEventExample.cs`
+    Available namespaces are list here.
 
     ![](Screenshots/extendedevent-4.png)
+
+4. Examples can be found in `_Scripts/Examples/ExtendedEventExample.cs`
+
+    ![](Screenshots/extendedevent-5.png)
